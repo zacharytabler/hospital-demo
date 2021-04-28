@@ -4,6 +4,13 @@ public class Patient {
 
     private int healthLevel;
     private int bloodLevel;
+    private int patientId = 0;
+
+    public Patient(int healthLevel, int bloodLevel) {
+        this.healthLevel = healthLevel;
+        this.bloodLevel = bloodLevel;
+        patientId ++;
+    }
 
     public int getHealthLevel() {
         return healthLevel;
@@ -25,5 +32,9 @@ public class Patient {
 
     public void decreaseBloodLevel(int bloodDecreaseAmount) {
         bloodLevel -= bloodDecreaseAmount;
+    }
+
+    public Integer getPatientId() {
+        return patientId;
     }
 }

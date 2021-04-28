@@ -24,7 +24,7 @@ public class SurgeonTest {
     }
 
         @Test
-        public void shouldExpectASalaryOf90k () {
+        public void shouldExpectASalaryOf120k () {
             int salary = undertest.calculatePay();
             assertEquals(120000, salary);
         }
