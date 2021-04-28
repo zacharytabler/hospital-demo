@@ -1,18 +1,16 @@
 package hospital;
 
-public class Doctor {
+public class Doctor extends HospitalEmployee implements MedicalDuties {
 
 
-private String employeeNumber;
-private String name;
-private String specialty;
+    private String specialty;
 
 public Doctor(String employeeNumber, String name, String specialty) {
-        this.employeeNumber = employeeNumber;
-        this.name = name;
-        this.specialty = specialty;
+    super(employeeNumber, name);
+    this.specialty = specialty;
     }
 
+    @Override
     public void careForPatient(Patient sickpatient) {
     sickpatient.increaseHealthLevel(10);
 
@@ -20,10 +18,12 @@ public Doctor(String employeeNumber, String name, String specialty) {
 
 }
 
+    @Override
     public void drawblood(Patient sickpatient) {
         sickpatient.decreaseBloodLevel(5);
     }
 
+    @Override
     public int calculatePay() {
     return 90000;
     }

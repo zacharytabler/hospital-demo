@@ -10,10 +10,10 @@ class NurseTest {
     Patient sickpatient = new Patient();
 
     @Test
-    public void shouldBeAbleToIncreaseHealthLevelOfPatientFrom10To20WhenProvidingCare(){
+    public void shouldBeAbleToIncreaseHealthLevelOfPatientFrom10To15WhenProvidingCare(){
         underTest.careForPatient(sickpatient);
         int patientHealthLevel = sickpatient.getHealthLevel();
-        assertEquals(20, patientHealthLevel);
+        assertEquals(15, patientHealthLevel);
     }
 
         @Test
